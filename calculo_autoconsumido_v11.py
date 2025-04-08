@@ -163,7 +163,7 @@ def procesar_lectura(data0n,data1n,position):
     if(currentTimeD.replace(tzinfo=None) + timedelta(hours=2) >= datetime.now()):
         timeOk = 0
 
-    if(isinstance(data0n[1], float) and isinstance(data1n[1], float)):
+    if(isinstance(data0n[1], (float, int)) and isinstance(data1n[1], (float, int))):
         decodedOk = 1
         logging.debug("decodedOk = 1. types ok")
     else:
